@@ -1,8 +1,8 @@
 class Tinyimg < Formula
   desc "Losslessly optimize PNG and JPG images with a minimal terminal UI"
   homepage "https://github.com/jcalixte/tinyimg"
-  url "https://github.com/jcalixte/tinyimg/archive/refs/tags/v1.3.0.tar.gz"
-  sha256 "2f7db303f4c8060f39027ed2edb2545a03b557394806e3e0256aa6d89a088753"
+  url "https://github.com/jcalixte/tinyimg/archive/refs/tags/v1.3.1.tar.gz"
+  sha256 "ec47b17677bbb9905bab2ed9b65105f38d48172a8828eac1815d707e831aba75"
   license "MIT"
 
   depends_on "gleam" => :build
@@ -21,6 +21,6 @@ class Tinyimg < Formula
   end
 
   test do
-    assert_match "1.3.0", shell_output("#{bin}/tinyimg --version")
+    assert_match "1.3.1", shell_output("#{bin}/tinyimg --version")
   end
 end
