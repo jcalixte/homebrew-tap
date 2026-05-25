@@ -1,15 +1,17 @@
-# homebrew-tinyimg
+# homebrew-tap
 
-Homebrew tap for [tinyimg](https://github.com/jcalixte/tinyimg) — losslessly
-optimize PNG and JPG images with a minimal terminal UI.
+Personal Homebrew tap. Currently ships:
+
+- **[tinyimg](https://github.com/jcalixte/tinyimg)** — losslessly optimize PNG
+  and JPG images with a minimal terminal UI.
 
 ## Install
 
 ```sh
-brew install jcalixte/tinyimg/tinyimg
+brew install jcalixte/tap/tinyimg
 ```
 
-That command auto-taps `jcalixte/homebrew-tinyimg` and installs the formula.
+That command auto-taps `jcalixte/homebrew-tap` and installs the formula.
 
 ## What gets installed
 
