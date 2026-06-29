@@ -6,15 +6,15 @@ class Printboard < Formula
   license "MIT"
 
   depends_on "poppler"        # pdftotext — read slide titles from the export
-  depends_on "rclone"         # export the org-restricted Slides deck to PDF
   depends_on "python@3.12"
+  depends_on "rclone"         # export the org-restricted Slides deck to PDF
 
   def install
     # Ship the script and the (doc_id-free) default manifest together; the script
     # finds the manifest next to itself, or ~/.config/printboard/manifest.json.
     libexec.install "printboard", "manifest.json"
     (bin/"printboard").write_env_script libexec/"printboard",
-                                         PATH: "#{Formula["python@3.12"].opt_bin}:$PATH"
+                                         PATH: "#{formula_opt_bin("python@3.12")}:$PATH"
   end
 
   def caveats
