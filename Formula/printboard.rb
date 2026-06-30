@@ -1,10 +1,11 @@
 class Printboard < Formula
   desc "Print the Enabler project board's papers at the right size, count, and version"
   homepage "https://github.com/jcalixte/board-setup"
-  url "https://github.com/jcalixte/board-setup/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "f1b922cf3558af4eb6f15e704bd8fa1d0ced8d8f2fcc75e20e01d0cae497175e"
+  url "https://github.com/jcalixte/board-setup/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "6d031b2eff595c4777bbee2576e877c3f03451a656095aa8ece74356c9d191e3"
   license "MIT"
 
+  depends_on "ghostscript"    # gs — scale each page to its exact A3/A4 size before printing
   depends_on "poppler"        # pdftotext — read slide titles from the export
   depends_on "python@3.12"
   depends_on "rclone"         # export the org-restricted Slides deck to PDF
