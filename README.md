@@ -4,6 +4,9 @@ Personal Homebrew tap. Currently ships:
 
 - **[tinyimg](https://github.com/jcalixte/tinyimg)** — losslessly optimize PNG
   and JPG images with a minimal terminal UI.
+- **[printboard](https://github.com/jcalixte/board-setup)** — print the Enabler
+  project board's papers at the right size, count, and version. Needs
+  `printboard setup --deck "<url>"` once, because the deck is org-restricted.
 - **[starkit](https://github.com/jcalixte/starkit)** — keyboard-summoned launcher
   for personal automations, written in Gleam. Builds from source, and needs
   `starkit-install` run once afterwards; `brew info starkit` says why.
