@@ -7,9 +7,10 @@ Personal Homebrew tap. Currently ships:
 - **[printboard](https://github.com/jcalixte/board-setup)** — print the Enabler
   project board's papers at the right size, count, and version. Needs
   `printboard setup --deck "<url>"` once, because the deck is org-restricted.
-- **[starkit](https://github.com/jcalixte/starkit)** — keyboard-summoned launcher
-  for personal automations, written in Gleam. Builds from source, and needs
-  `starkit-install` run once afterwards; `brew info starkit` says why.
+- **[starkit](https://github.com/jcalixte/starkit)** (cask) — keyboard-summoned
+  launcher for personal automations, written in Gleam. Notarized, so it opens
+  without the right-click-open dance. Needs `bun` on your `PATH`;
+  `brew info --cask starkit` says why it is not a dependency.
 
 ## Install
 
