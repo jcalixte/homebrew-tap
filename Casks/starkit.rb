@@ -1,6 +1,6 @@
 cask "starkit" do
-  version "0.3.0"
-  sha256 "9937f86ab090ee6b92b91aa8aed4ae8fd8a3c820ef356ad1fe8b5985c2210cad"
+  version "0.4.0"
+  sha256 "06b5fc65ad0c1ec7335696cab48951e51720da7d75fd138f1861c06fd1701be9"
 
   url "https://github.com/jcalixte/starkit/releases/download/v#{version}/Starkit-#{version}.zip",
       verified: "github.com/jcalixte/starkit/"
