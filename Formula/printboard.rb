@@ -11,8 +11,8 @@ class Printboard < Formula
   depends_on "rclone"         # export the org-restricted Slides deck to PDF
 
   def install
-    # Ship the script and the (doc_id-free) default manifest together; the script
-    # finds the manifest next to itself, or ~/.config/printboard/manifest.json.
+    # Ship the script and the default manifest together (the manifest carries the
+    # board deck url); the script finds it next to itself, or in ~/.config/printboard/.
     libexec.install "printboard", "manifest.json"
     (bin/"printboard").write_env_script libexec/"printboard",
                                          PATH: "#{formula_opt_bin("python@3.12")}:$PATH"
@@ -21,13 +21,15 @@ class Printboard < Formula
   def caveats
     <<~EOS
       One-time per user (the deck is org-restricted):
-        printboard setup --deck "<Google Slides URL or id>"
+        printboard setup
         printboard doctor
 
-      setup authorises rclone (read-only) and saves the deck id to
-      ~/.config/printboard/config.json (it is never shipped in the formula). If your
-      Workspace blocks third-party OAuth apps, create your own OAuth client in Google
-      Cloud Console and re-run `rclone config`.
+      setup authorises rclone (read-only), then shows the board deck and asks you to
+      confirm it — press Enter. To print from another deck, answer n and paste its URL
+      (or pass --deck "<URL or id>"): that saves a doc_id override to
+      ~/.config/printboard/config.json. If your Workspace blocks third-party OAuth
+      apps, create your own OAuth client in Google Cloud Console and re-run
+      `rclone config`.
     EOS
   end
 
